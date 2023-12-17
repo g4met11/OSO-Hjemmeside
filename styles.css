@@ -1,0 +1,132 @@
+/* Generel stil for elementerne */
+body {
+  --mdc-font-size: 2vmin;
+  --gm-button--font-size: 1em;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  font-size: .9rem;
+  font-weight: 400;
+  margin: 0; /* Fjerner standardmarginer */
+  padding: 0; /* Fjerner standardpadding */
+  background-image: url('bg2.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center; /* Centrerer indholdet */
+  align-items: center; /* Centrerer indholdet */
+  min-height: 100vh; /* Sikrer 100% visning i vinduet */
+}
+
+.container {
+  display: flex;
+  background-color: #fff; /* Baggrundsfarve for containeren */
+  color: #63676c;
+  padding: 20px; /* Padding for containeren */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.219); /* Skyggeeffekt for firkanten */
+  animation: popIn 0.5s forwards; /* Animation ved visning */
+  border-radius: 10px;
+  height: 50vh;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.5); /* Startskalering */
+    opacity: 0; /* Startgennemsigtighed */
+  }
+  to {
+    transform: scale(1); /* Slutskalering */
+    opacity: 1; /* Sluttet gennemsigtighed */
+  }
+}
+
+.sidebar {
+  width: 200px; /* Juster bredden efter behov */
+  background-color: #fff; /* Baggrundsfarve for menuen */
+  padding: 20px; /* Padding for menuen */
+}
+
+.menu-item {
+  padding: 10px 0; /* Lodret padding for menuindgange */
+  cursor: pointer; /* Ændrer markøren til et pegefingerikon */
+  color: #63676c;
+}
+
+.menu-item:hover {
+  background-color: #2195f3ca;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.menu-item.active {
+  /* font-weight: bold; Gør den aktive menuindgang fed */
+  background-color: #e8f0fe;
+  color: #4282db;
+  border-radius: 10px;
+}
+
+.additional-settings {
+  flex: 1; /* Gør det fyldende, så det strækker sig */
+  padding: 20px; /*Padding for den nye firkant*/
+  margin-left: 20px; /* Margin mellem den nye firkant og menuen */
+}
+
+.mute-settings label {
+  display: block; /* Gør label til blokelement for korrekt layout */
+  margin-bottom: 25px; /* Afstand mellem label og checkbox */
+}
+
+.cam-settings label {
+  display: block; /* Gør label til blokelement for korrekt layout */
+  margin-bottom: 25px; /* Afstand mellem label og checkbox */
+}
+
+.adminAntiSpam label {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  margin-bottom: 125px;
+}
+
+.switch .checkbox {
+  display: none;
+}
+
+.switch .slider {
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 25px;
+  top: -3px;
+}
+
+.switch .slider:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.switch .checkbox:checked + .slider {
+  background-color: #2196F3;
+}
+
+.switch .checkbox:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.switch-label {
+  margin-right: 10px;
+}

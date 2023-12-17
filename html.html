@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Side Menu</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link til din CSS-fil -->
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="menu">
+        <div class="menu-item">
+          <span class="emoji">🔊</span> Lyd
+        </div>
+        <div class="menu-item">
+          <span class="emoji">🎥</span> Video
+        </div>
+        <div class="menu-item">
+          <span class="emoji">⚙️</span> Generelt
+        </div>
+        <div class="menu-item">
+          <span class="emoji">📝</span> Undertekster
+        </div>
+        <div class="menu-item">
+          <span class="emoji">😊</span> Reaktioner
+        </div>
+        <div class="menu-item active">
+          <span class="emoji">🔇</span> Klasseindstillinger
+        </div>
+      </div>
+    </div>
+    <div class="additional-settings">
+      <!-- Mute-funktionalitet for Klasseindstillinger -->
+      <div style="display: flex;" class="mute-settings">
+        <label class="switch">
+          <input type="checkbox" id="adminMute" class="checkbox">
+          <div class="slider round"></div>
+        </label>
+        <label for="adminMute" class="switch-label">Tillad kun at Administartoren kan mute eller unmute deltagere</label>
+      </div>
+      
+      
+      <div style="display: flex;" class="cam-settings">
+        <label class="switch">
+          <input type="checkbox" id="adminCam" class="checkbox">
+          <div class="slider round"></div>
+        </label>
+        <label for="adminCam" class="switch-label">Deltagere skal have kamera på</label>
+      </div>
+
+      <div style="display: flex;" class="antispam-settings">
+        <label class="switch">
+          <input type="checkbox" id="adminAntiSpam" class="checkbox">
+          <div class="slider round"></div>
+        </label>
+        <label for="adminAntiSpam" class="switch-label">Anti spam funktion</label>
+      </div>
+    <div class="settings-panel" id="settingsPanel">
+      <!-- Her vises indstillingerne -->
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- Link til din JavaScript-fil -->
+</body>
+</html>
